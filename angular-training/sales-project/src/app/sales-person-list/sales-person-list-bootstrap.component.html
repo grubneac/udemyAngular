@@ -8,7 +8,8 @@
     </thead>
 
     <tbody>
-        <tr *ngFor = "let tempSalePerson of salesPersonList">
+        <tr *ngFor = "let tempSalePerson of salesPersonList" [ngClass]="{'highlight':tempSalePerson.salesVolume >= 50000, 
+                                                                         'simpleRow':tempSalePerson.salesVolume < 50000}">
             <td>{{tempSalePerson.firstName}}</td>  
             <td>{{tempSalePerson.lastName}}</td>  
             <td>{{tempSalePerson.email}}</td>  
