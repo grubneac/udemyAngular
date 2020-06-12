@@ -11,8 +11,10 @@
             <td>{{tempSalePerson.firstName}}</td>  
             <td>{{tempSalePerson.lastName}}</td>  
             <td>{{tempSalePerson.email}}</td>  
-            <td>{{tempSalePerson.salesVolume}}</td>  
-
+            <td>
+                <div *ngIf="tempSalePerson.salesVolume >= 60000; else myElseBloc">Yes</div>
+                <ng-template #myElseBloc>No</ng-template>
+            </td>  
         </tr>
     </tbody>
 </table>
