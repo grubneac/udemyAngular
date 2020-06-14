@@ -38,7 +38,7 @@ public class Product {
     @Column(name = "image_url")
     private String imageUrl;
 
-    @Column(name = "active_BIT")
+    @Column(name = "active")
     private boolean active;
 
     @Column(name = "units_in_stock")
