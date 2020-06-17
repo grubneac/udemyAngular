@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product.service';
+
 import { Routes, RouterModule} from '@angular/router';
 
-const routers: Routes = [
-  {path: 'category/:id/', component: ProductListComponent},
+const routes: Routes = [
+  {path: 'category/:id', component: ProductListComponent},
   {path: 'category', component: ProductListComponent},
   {path: 'products', component: ProductListComponent},
   {path: '', redirectTo: '/products', pathMatch: 'full'},
@@ -21,7 +22,7 @@ const routers: Routes = [
     ProductListComponent
   ],
   imports: [
-    RouterModule.forRoot(routers),
+    RouterModule.forRoot(routes),
     BrowserModule,
     HttpClientModule
   ],

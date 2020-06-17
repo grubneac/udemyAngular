@@ -22,7 +22,6 @@ export class ProductListComponent implements OnInit {
     });
   }
 
- 
   listProducts() {
 
     // check if "id" parameter is avalible
